@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="auto_layout_advanced" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +19,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4t7-Fz-Jd7">
+                                <rect key="frame" x="20" y="20" width="560" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.096316338877687757" blue="0.15082142533070786" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="E3t-ak-VHY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnU-Rc-fjv">
+                                <rect key="frame" x="304" y="164" width="276" height="128"/>
+                                <color key="backgroundColor" red="0.24792766151976919" green="1" blue="0.24497601509031119" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="kJN-bu-q93"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocket 2" translatesAutoresizingMaskIntoConstraints="NO" id="e53-mp-TKh">
+                                <rect key="frame" x="150" y="434" width="300" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e53-mp-TKh" secondAttribute="height" multiplier="189:95" id="Hx6-3G-PFR"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKP-x9-GUg">
+                                <rect key="frame" x="20" y="164" width="276" height="128"/>
+                                <color key="backgroundColor" red="0.28637677420367436" green="0.30007502006159736" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="BSp-cj-dDT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cKP-x9-GUg" firstAttribute="top" secondItem="4t7-Fz-Jd7" secondAttribute="bottom" constant="16" id="9lA-7K-QZM"/>
+                            <constraint firstItem="cKP-x9-GUg" firstAttribute="leading" secondItem="4t7-Fz-Jd7" secondAttribute="leading" id="CZo-Ph-1BC"/>
+                            <constraint firstItem="4t7-Fz-Jd7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Df7-P3-Ocw"/>
+                            <constraint firstItem="mnU-Rc-fjv" firstAttribute="trailing" secondItem="4t7-Fz-Jd7" secondAttribute="trailing" id="Hif-Sb-4B8"/>
+                            <constraint firstItem="4t7-Fz-Jd7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KZR-6j-cov"/>
+                            <constraint firstItem="e53-mp-TKh" firstAttribute="trailing" secondItem="4t7-Fz-Jd7" secondAttribute="centerX" multiplier="1.5" id="S3L-Bh-PC1"/>
+                            <constraint firstItem="e53-mp-TKh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="Y2L-2Z-485"/>
+                            <constraint firstItem="4t7-Fz-Jd7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eOw-D2-u5u"/>
+                            <constraint firstItem="4t7-Fz-Jd7" firstAttribute="width" secondItem="mnU-Rc-fjv" secondAttribute="width" multiplier="2" constant="8" id="hRu-Cv-PxM"/>
+                            <constraint firstItem="4t7-Fz-Jd7" firstAttribute="width" secondItem="cKP-x9-GUg" secondAttribute="width" multiplier="2" constant="8" id="kFW-hg-Hn1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e53-mp-TKh" secondAttribute="bottom" constant="15" id="nJx-qM-aeq"/>
+                            <constraint firstItem="mnU-Rc-fjv" firstAttribute="top" secondItem="4t7-Fz-Jd7" secondAttribute="bottom" constant="16" id="tJa-ZX-pV0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-671" y="-300"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rocket 2" width="800" height="600"/>
+    </resources>
 </document>
